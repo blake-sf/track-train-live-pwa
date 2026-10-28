@@ -2,7 +2,7 @@ import type { ScriptedResponse } from './sse.ts'
 
 /**
  * Scripted model turns. These are synthetic but follow the request/response
- * shapes the app uses with OpenRouter; see docs/LOCAL-TESTING.md for how to
+ * shapes the app uses with OpenRouter; see docs/TESTING.md for how to
  * refresh them from a real session.
  */
 export const E2E_SESSION = 'E2E Upper Body'
