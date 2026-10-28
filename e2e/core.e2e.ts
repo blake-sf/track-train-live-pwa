@@ -74,8 +74,12 @@ test('chat proposes a workout, Today logs and completes it, Log shows it', async
   })
 
   await test.step('Log: the completed session is listed', async () => {
-    const dismiss = page.getByRole('button', { name: /not now|dismiss|close|skip/i })
-    if (await dismiss.first().isVisible().catch(() => false)) await dismiss.first().click()
+    const debriefHeading = page.getByRole('heading', { name: 'Workout done!' })
+    await expect(debriefHeading).toBeVisible()
+    const notNow = page.getByRole('button', { name: 'Not now', exact: true })
+    await expect(notNow).toBeVisible()
+    await notNow.click()
+    await expect(debriefHeading).toBeHidden()
     await openTab(page, 'Log')
     await expect(page.locator('.history-card', { hasText: E2E_SESSION })).toBeVisible()
   })

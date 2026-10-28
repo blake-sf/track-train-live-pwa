@@ -4,7 +4,7 @@ _Agreed with Michael on October 28, 2026. The related research is in `DECISION-S
 
 ## Boundary
 
-Build for Michael alone. OpenRouter app stats show no use beyond his own July testing, so this plan skips migrations, multi-device matrices and live-site monitoring.
+Build for Michael alone. This plan skips migrations, multi-device matrices and live-site monitoring.
 
 Branches: `main` is the integration branch, and Netlify deploys only from `release`. Work lands as pull requests from the `blake-sf` fork against `michaepf/track-train-live-pwa` `main`. Nothing is merged or pushed to Michael's repo except through a PR he reviews.
 

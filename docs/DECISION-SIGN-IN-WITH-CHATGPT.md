@@ -35,7 +35,7 @@ On October 28, CORS preflights from both `https://track-train-live.netlify.app` 
 
 ## Why we shelved it
 
-- The hosted path goes through an interest form aimed at businesses. Michael has no business or business email, and OpenAI's own docs point hobby developers to the self-serve documentation instead.
+- The hosted path goes through a commercial-partner process, which is not an available or established route for this individual/hobby hosted app. OpenAI's own docs point hobby developers to the self-serve documentation instead.
 - The self-serve path requires a loopback redirect and local credential storage, so it doesn't fit a hosted PWA. Working around that would mean breaking OpenAI's stated rules.
 - If we got approval later, the smallest compliant design would be a token service (for example, a couple of Netlify Functions holding the refresh token in an HttpOnly cookie), with inference still going from the browser to OpenAI. That would end the app's "no backend" property, which the README highlights, and add a component to secure.
 - OpenRouter already carries OpenAI models. The planned model-picker change gets users those models with far less work.

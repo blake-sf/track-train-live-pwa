@@ -20,6 +20,8 @@ jobs:
       - run: npm ci
       - name: Unit tests (vitest)
         run: npx vitest run
+      - name: Production build
+        run: npm run build
       - name: Install Chromium for Playwright
         run: npx playwright install --with-deps chromium
       - name: End-to-end tests (Playwright, OpenRouter mocked)
