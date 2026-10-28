@@ -18,6 +18,7 @@ All data is stored locally on your device using IndexedDB. Nothing leaves your d
 - **No backend.** All state lives in the browser via IndexedDB. Auth is handled through OpenRouter's OAuth flow; the API key is stored locally.
 - AI requests go directly from the browser to the OpenRouter API
 - Tests: `npm test` (vitest) and `npm run test:e2e` (Playwright, OpenRouter mocked); see [docs/TESTING.md](docs/TESTING.md)
+- The Chat model picker lists the models in [`config/models.json`](config/models.json) on `main`. The app reads that file from GitHub at startup, so editing it in GitHub's web editor changes the picker within about five minutes, with no deploy. Each entry is `{ "id": "<OpenRouter model id>", "label": "...", "note": "..." }`, and `default` must be one of the ids. If the file can't be fetched or doesn't validate, the app uses its built-in two-model list. A saved choice that is no longer listed falls back to `default`.
 
 ## Deploy your own
 
